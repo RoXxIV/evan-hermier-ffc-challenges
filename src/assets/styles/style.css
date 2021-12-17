@@ -1,3 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+:root {
+  --black: #0d1117;
+  --orange: #ffcdae;
+}
+* {
+  outline: none;
+  text-decoration: none;
+  transition: all 0.2s ease 0s;
+}
+* {
+  box-sizing: inherit;
+}
+*:hover {
+  transition: all 0.2s ease 0s;
+}
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
 body {
   background-image: url(../images/pattern-randomized.svg);
+  color: var(--black);
+  margin: 0px;
+  padding: 0px;
+  font-family: "Spartan", sans-serif;
+}
+a,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+nav {
+  list-style: none;
+  padding-left: 0;
 }
