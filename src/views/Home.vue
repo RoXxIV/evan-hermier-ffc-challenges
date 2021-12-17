@@ -27,6 +27,8 @@ main {
 @media (max-width: 667.98px) {
   main {
     width: 100%;
+    margin: 10px auto;
+    padding: 15px;
   }
 }
 </style>

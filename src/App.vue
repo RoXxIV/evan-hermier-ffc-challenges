@@ -65,7 +65,7 @@
           "
         >
           <span class="circle"></span
-          ><router-link to="introduction" class="mobile-link">Home</router-link>
+          ><router-link to="/" class="mobile-link">Home</router-link>
         </li>
         <li
           @click="
