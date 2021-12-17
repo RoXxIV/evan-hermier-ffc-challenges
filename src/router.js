@@ -3,9 +3,8 @@ import Introduction from "./components/Introduction.vue";
 import Calculator from "./components/Calculator/Calculator.vue";
 import Clock from "./components/Clock/Clock.vue";
 import Markdown from "./components/Markdown/Markdown.vue";
-import DrumMachine from "./components/Drum Machine/DrumMachine.vue";
+import DrumMachine from "./components/DrumMachine/DrumMachine.vue";
 import QuoteGenerator from "./components/QuoteGenerator/QuoteGenerator.vue";
-
 const routes = [
   {
     path: "/",
