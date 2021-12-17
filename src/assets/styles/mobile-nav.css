@@ -1,0 +1,63 @@
+/*___Mobile Nav__Transition_*/
+.fade-enter-active {
+  transition: opacity 0.5s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+/***___Button Burger + Animation___***/
+#menu-burger {
+  display: none;
+  position: absolute;
+  left: 85%;
+  top: 1%;
+}
+.menu {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+}
+.line {
+  fill: none;
+  stroke: var(--black);
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+/***___Media Queries___***/
+/***___Mobile, Moins de 668px___***/
+@media (max-width: 667.98px) {
+  #menu-burger {
+    display: block;
+  }
+}
