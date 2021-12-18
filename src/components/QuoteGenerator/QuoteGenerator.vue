@@ -86,6 +86,8 @@ section {
   padding: 60px;
   border: 3px solid var(--black);
   border-radius: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 h2 {
   margin: 0;
@@ -94,11 +96,16 @@ h2 {
   font-weight: bold;
 }
 #quote-box {
-  width: 100%px;
+  width: 100%;
+  min-width: 80%;
+  height: 300px;
   padding: 30px;
   margin: 50px auto;
   background-color: white;
   font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 #quote-box p {
   font-weight: bold;
@@ -136,13 +143,17 @@ h2 {
   letter-spacing: 0.5px;
 }
 /***___Media Queries___***/
+@media (max-width: 991.98px) {
+}
 /***___Mobile, Moins de 668px___***/
 @media (max-width: 667.98px) {
   section {
     padding: 20px 10px;
+    margin-top: 30px;
   }
   #quote-box {
     margin: 20px auto;
+    height: auto;
   }
   #buttons {
     display: flex;
