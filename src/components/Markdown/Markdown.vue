@@ -3,10 +3,11 @@
     <h2>Build a Markdown Previewer</h2>
     <div id="content">
       <div id="editorContent">
-        <h2>Editor</h2>
+        <h3>Editor</h3>
         <textarea id="editor" rows="15" cols="60" v-model="source"></textarea>
       </div>
-      <div id="preview" class="shadow">
+      <div id="previewContent" class="shadow">
+        <h3>Previewer</h3>
         <Markdown
           :source="source"
           :html="true"
@@ -14,6 +15,7 @@
           :xhtmlOut="true"
           :typographer="true"
           :linkify="true"
+          id="markown"
         />
       </div>
     </div>
@@ -82,10 +84,72 @@ And here. | Okay. | I think we get it.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
 
-![freeCodeCamp Logo](https://cdn.freecodecamp.org/testable-projects-fcc/images/fcc_secondary.svg=400x400)
+![freeCodeCamp Logo](https://zupimages.net/up/21/50/1k6b.jpg)
 `;
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+h2 {
+  margin-top: 0;
+  text-align: center;
+  font-weight: bold;
+  color: #1b1b32;
+}
+#content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  background: white;
+  width: 100%;
+  min-width: 80%;
+  border: 1px solid #4949492d;
+  border-radius: 5px;
+  padding: 30px;
+}
+#editorContent {
+  text-align: center;
+}
+#editorContent > h3:first-of-type {
+  font-size: 1.8em;
+  margin-top: 0px;
+  color: #1b1b32;
+}
+#previewContent > h3:first-of-type {
+  text-align: center;
+  font-size: 1.8em;
+  color: #1b1b32;
+}
+#markown {
+  border: 1px solid var(--black);
+  padding: 10px;
+  border-radius: 5px;
+  background: #1b1b32;
+  color: #f5f6f7;
+}
+.link-to-challenge {
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 0.5px;
+  margin-top: 30px;
+}
+/***___Media Queries___***/
+/***___Mobile, Moins de 668px___***/
+@media (max-width: 667.98px) {
+  #content {
+    padding: 0;
+    border: none;
+  }
+  textarea {
+    width: 100%;
+  }
+  #editorContent > h3:first-of-type {
+    font-size: 1.3em;
+  }
+  #previewContent > h3:first-of-type {
+    font-size: 1.3em;
+  }
+}
+</style>

@@ -83,7 +83,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 60px;
+  padding: 100px;
   border: 3px solid var(--black);
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
@@ -143,8 +143,6 @@ h2 {
   letter-spacing: 0.5px;
 }
 /***___Media Queries___***/
-@media (max-width: 991.98px) {
-}
 /***___Mobile, Moins de 668px___***/
 @media (max-width: 667.98px) {
   section {
