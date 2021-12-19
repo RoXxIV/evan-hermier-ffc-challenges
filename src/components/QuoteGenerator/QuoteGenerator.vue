@@ -84,7 +84,7 @@ section {
   flex-direction: column;
   justify-content: space-between;
   padding: 100px;
-  border: 3px solid var(--black);
+  border: 3px solid var(--light);
   border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
@@ -92,7 +92,7 @@ section {
 h2 {
   margin: 0;
   text-align: center;
-  color: white;
+  color: var(--light);
   font-weight: bold;
 }
 #quote-box {
@@ -125,7 +125,7 @@ h2 {
   margin: 50px 20px 0px 20px;
 }
 #buttons a {
-  color: white;
+  color: var(--light);
   padding: 10px;
   margin: 0;
   cursor: pointer;
@@ -139,7 +139,7 @@ h2 {
 .link-to-challenge {
   text-align: center;
   text-decoration: underline;
-  color: white;
+  color: var(--light);
   letter-spacing: 0.5px;
 }
 /***___Media Queries___***/
@@ -159,7 +159,7 @@ h2 {
     margin-top: 50px;
   }
   #buttons a {
-    color: white;
+    color: var(--light);
     text-align: center;
     padding: 10px;
     margin: 5px auto;

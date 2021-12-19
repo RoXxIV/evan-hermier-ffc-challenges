@@ -154,7 +154,7 @@ export default {
 <style>
 header {
   padding: 15px;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--light);
   text-align: center;
 }
 nav ul {
@@ -165,7 +165,7 @@ nav ul li {
   margin: 0px 10px;
 }
 nav ul li:hover span {
-  color: var(--orange);
+  opacity: 0.8;
 }
 /***___Mobile Nav___***/
 #mobileNav {
@@ -183,14 +183,14 @@ nav ul li:hover span {
   align-items: center;
   margin: 0px 24px;
   padding: 20px 0px;
-  border-bottom: 1px solid var(--black);
+  border-bottom: 1px solid var(--light);
 }
 .circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   margin-right: 25px;
-  background: var(--orange);
+  background: var(--light);
 }
 /***___Media Queries___***/
 /***___Mobile, Moins de 668px___***/
@@ -206,7 +206,7 @@ nav ul li:hover span {
     display: none;
   }
   #mobileNav ul {
-    background: white;
+    background: var(--dark);
   }
 }
 </style>
