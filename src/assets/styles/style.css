@@ -2,6 +2,8 @@
 :root {
   --black: #0d1117;
   --orange: #ffcdae;
+  --dark: #1b1b32;
+  --light: white;
 }
 * {
   outline: none;
@@ -19,8 +21,8 @@ html {
   box-sizing: border-box;
 }
 body {
-  background-image: url(../images/pattern-randomized.svg);
-  color: var(--black);
+  color: white;
+  background: var(--dark);
   margin: 0px;
   padding: 0px;
   font-family: "Spartan", sans-serif;

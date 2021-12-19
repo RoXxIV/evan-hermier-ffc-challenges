@@ -95,17 +95,17 @@ h2 {
   margin-top: 0;
   text-align: center;
   font-weight: bold;
-  color: #1b1b32;
+  color: var(--light);
 }
 #content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 10px;
-  background: white;
+  background: var(--light);
   width: 100%;
   min-width: 80%;
-  border: 1px solid #4949492d;
+  border: 1px solid var(--dark);
   border-radius: 5px;
   padding: 30px;
 }
@@ -115,19 +115,19 @@ h2 {
 #editorContent > h3:first-of-type {
   font-size: 1.8em;
   margin-top: 0px;
-  color: #1b1b32;
+  color: var(--dark);
 }
 #previewContent > h3:first-of-type {
   text-align: center;
   font-size: 1.8em;
-  color: #1b1b32;
+  color: var(--dark);
 }
 #markown {
-  border: 1px solid var(--black);
+  border: 1px solid var(--dark);
   padding: 10px;
   border-radius: 5px;
   background: #1b1b32;
-  color: #f5f6f7;
+  color: var(--light);
 }
 .link-to-challenge {
   text-align: center;
