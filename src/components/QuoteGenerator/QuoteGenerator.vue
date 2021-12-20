@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Build a Random Quote Machine</h2>
+    <h2 class="custom-H2">Build a Random Quote Machine</h2>
     <div id="quote-box" :style="`border: 10px solid RGB(${color},0.7)`">
       <p id="text" :style="`color: RGB(${color})`">
         <q>{{ quote }}</q>
@@ -81,12 +81,6 @@ section {
   flex-direction: column;
   justify-content: space-between;
   padding: 0px 100px;
-}
-h2 {
-  margin: 0;
-  text-align: center;
-  color: var(--light);
-  font-weight: bold;
 }
 #quote-box {
   width: 100%;

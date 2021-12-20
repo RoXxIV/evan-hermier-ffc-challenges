@@ -39,6 +39,12 @@ nav {
   list-style: none;
   padding-left: 0;
 }
+.custom-H2 {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  color: var(--light);
+}
 .link-to-challenge {
   text-align: center;
   text-decoration: underline;

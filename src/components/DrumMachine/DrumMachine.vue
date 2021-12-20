@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Build a Drum Machine</h2>
+    <h2 class="custom-H2">Build a Drum Machine</h2>
     <div id="drum-machine-header">
       <h3>Power</h3>
       <label class="switch">
@@ -191,17 +191,6 @@ export default {
 </script>
 
 <style scoped>
-section {
-  padding: 30px;
-  border: 3px solid var(--light);
-  border-radius: 5px;
-}
-h2 {
-  margin-top: 0;
-  text-align: center;
-  font-weight: bold;
-  color: var(--light);
-}
 #drum-machine-header {
   display: flex;
   justify-content: end;
@@ -234,14 +223,9 @@ h3 {
 }
 #display {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px auto 30px auto;
 }
-.link-to-challenge {
-  text-align: center;
-  text-decoration: underline;
-  letter-spacing: 0.5px;
-  margin-top: 30px;
-}
+
 /* toggle button */
 /* The switch - the box around the slider */
 .switch {

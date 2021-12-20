@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Build a Markdown Previewer</h2>
+    <h2 class="custom-H2">Build a Markdown Previewer</h2>
     <div id="content">
       <div id="editorContent">
         <h3>Editor</h3>
@@ -15,7 +15,7 @@
           :xhtmlOut="true"
           :typographer="true"
           :linkify="true"
-          id="markown"
+          id="preview"
         />
       </div>
     </div>
@@ -91,12 +91,6 @@ And here. | Okay. | I think we get it.
 </script>
 
 <style scoped>
-h2 {
-  margin-top: 0;
-  text-align: center;
-  font-weight: bold;
-  color: var(--light);
-}
 #content {
   display: flex;
   flex-direction: column;
@@ -108,6 +102,7 @@ h2 {
   border: 1px solid var(--dark);
   border-radius: 5px;
   padding: 30px;
+  margin: 30px auto;
 }
 #editorContent {
   text-align: center;
@@ -122,18 +117,12 @@ h2 {
   font-size: 1.8em;
   color: var(--dark);
 }
-#markown {
+#preview {
   border: 1px solid var(--dark);
   padding: 10px;
   border-radius: 5px;
   background: #1b1b32;
   color: var(--light);
-}
-.link-to-challenge {
-  text-align: center;
-  text-decoration: underline;
-  letter-spacing: 0.5px;
-  margin-top: 30px;
 }
 /***___Media Queries___***/
 /***___Mobile, Moins de 668px___***/
