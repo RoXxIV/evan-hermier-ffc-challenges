@@ -43,7 +43,7 @@ export default {
     };
   },
   mounted() {
-    this.source = `# Welcome to my React Markdown Previewer!
+    this.source = `# Welcome to my Vue 3 Markdown Previewer!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
