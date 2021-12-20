@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Build a Drum Machine</h2>
+    <h2 class="custom-H2">Build a Drum Machine</h2>
     <div id="drum-machine-header">
       <h3>Power</h3>
       <label class="switch">
@@ -148,7 +148,9 @@ export default {
       if (this.power === true) {
         const selectedKey = this.keys.find((key) => key.keyTrigger == e);
         const padColor = document.getElementById(selectedKey.keyTrigger);
+        if (!selectedKey) return;
         this.playSound(selectedKey);
+        if (!padColor) return;
         padColor.classList.add("pushed-pad");
         setTimeout(() => {
           this.display = "";
@@ -159,18 +161,20 @@ export default {
     handleKeyDown(e) {
       if (this.power === true) {
         const selectedKey = this.keys.find((key) => key.keyCode === e.keyCode);
-        const padColor = document.getElementById(selectedKey.keyTrigger);
         if (!selectedKey) return;
+        const padColor = document.getElementById(selectedKey.keyTrigger);
         this.playSound(selectedKey);
+        if (!padColor) return;
         padColor.classList.add("pushed-pad");
       }
     },
     handleKeyUp(e) {
       if (this.power === true) {
         const selectedKey = this.keys.find((key) => key.keyCode === e.keyCode);
-        const padColor = document.getElementById(selectedKey.keyTrigger);
         if (!selectedKey) return;
+        const padColor = document.getElementById(selectedKey.keyTrigger);
         this.display = "";
+        if (!padColor) return;
         padColor.classList.remove("pushed-pad");
       }
     },
@@ -191,17 +195,6 @@ export default {
 </script>
 
 <style scoped>
-section {
-  padding: 30px;
-  border: 3px solid var(--light);
-  border-radius: 5px;
-}
-h2 {
-  margin-top: 0;
-  text-align: center;
-  font-weight: bold;
-  color: var(--light);
-}
 #drum-machine-header {
   display: flex;
   justify-content: end;
@@ -234,13 +227,10 @@ h3 {
 }
 #display {
   text-align: center;
-  margin-top: 10px;
+  margin: 10px auto 30px auto;
 }
-.link-to-challenge {
-  text-align: center;
-  text-decoration: underline;
-  letter-spacing: 0.5px;
-  margin-top: 30px;
+.pushed-pad {
+  background: rgba(255, 255, 255, 0.3) !important;
 }
 /* toggle button */
 /* The switch - the box around the slider */
@@ -295,8 +285,5 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-.pushed-pad {
-  background: rgba(255, 255, 255, 0.3) !important;
 }
 </style>

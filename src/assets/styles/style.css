@@ -8,7 +8,7 @@
 * {
   outline: none;
   text-decoration: none;
-  transition: all 0.2s ease 0s;
+  transition: all 0.5s ease 0s;
 }
 * {
   box-sizing: inherit;
@@ -38,4 +38,16 @@ ul,
 nav {
   list-style: none;
   padding-left: 0;
+}
+.custom-H2 {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  color: var(--light);
+}
+.link-to-challenge {
+  text-align: center;
+  text-decoration: underline;
+  color: var(--light);
+  letter-spacing: 0.5px;
 }

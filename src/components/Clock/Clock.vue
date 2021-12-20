@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Build a 25 + 5 Clock</h2>
+    <h2 class="custom-H2">Build a 25 + 5 Clock</h2>
     <div id="pomodoro">
       <!--Timers-->
       <div id="timers">
@@ -70,7 +70,7 @@
         </div>
         <div v-show="state">
           <button id="start_stop" @click="pausePlay">
-            {{ !playState ? "play" : "pause" }}
+            {{ !playState ? "play" : "Pause" }}
           </button>
           <button id="reset" @click="reset">Reset</button>
         </div>
@@ -177,25 +177,13 @@ export default {
 </script>
 
 <style scoped>
-section {
-  padding: 30px;
-}
-h2 {
-  margin: 0px auto 30px auto;
-  text-align: center;
-  font-weight: bold;
-  color: var(--light);
-}
-#pomodoro {
-  width: 100%;
-}
 #timers {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 300px;
   height: 300px;
-  margin: auto;
+  margin: 30px auto 0px auto;
   border-radius: 50%;
   border: 2px solid var(--light);
   text-align: center;
@@ -231,7 +219,7 @@ nav span {
 }
 #action {
   text-align: center;
-  margin-top: 50px;
+  margin: 50px auto 30px auto;
 }
 #action button {
   width: 110px;
@@ -245,12 +233,7 @@ nav span {
   color: var(--dark);
   cursor: pointer;
 }
-.link-to-challenge {
-  text-align: center;
-  text-decoration: underline;
-  letter-spacing: 0.5px;
-  margin-top: 30px;
-}
+
 /***___Media Queries___***/
 /***___Tablet, Moins de 992px___***/
 @media (max-width: 991.98px) {
@@ -263,14 +246,5 @@ nav span {
   nav h4 {
     text-align: center;
   }
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>
