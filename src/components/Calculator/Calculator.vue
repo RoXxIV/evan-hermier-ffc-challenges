@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>Build a JavaScript Calculator</h2>
+    <h2 class="custom-H2">Build a JavaScript Calculator</h2>
     <!--Result-->
     <div id="screen">
       <p id="display">{{ result }}</p>
@@ -79,7 +79,7 @@ export default {
       } else if (key === "=") {
         this.total(this.current);
       }
-      this.showLog();
+      // this.showLog();
     },
     // ADD DIGIT
     addDigit(digit) {
@@ -126,15 +126,13 @@ export default {
 
 <style scoped>
 section {
-  background: white;
-  padding: 30px;
-  border-radius: 5px;
+  width: 90%;
+  margin: auto;
 }
-h2 {
-  margin: 0;
-  text-align: center;
-  color: var(--dark);
-  font-weight: bold;
+#calculator {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
 }
 #screen {
   background-color: hsl(224, 36%, 15%);
@@ -144,6 +142,8 @@ h2 {
   justify-content: space-between;
   padding: 30px 20px 30px 10px;
   margin-top: 30px;
+  border: 1px solid hsl(222, 26%, 31%);
+  border-radius: 5px;
 }
 #display {
   font-size: 1.5em;
@@ -156,6 +156,7 @@ h2 {
   background-color: hsl(222, 26%, 31%);
   border-radius: 10px;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 #keypad button {
   border-radius: 8px;
@@ -196,19 +197,15 @@ h2 {
 .blueKey:active {
   box-shadow: 0px 2px 0px hsl(223, 25%, 22%);
 }
-.link-to-challenge {
-  text-align: center;
-  text-decoration: underline;
-  letter-spacing: 0.5px;
-  margin-top: 30px;
-  color: var(--dark);
-}
 /***___Media Queries___***/
 /***___Mobile, Moins de 668px___***/
 @media (max-width: 667.98px) {
+  section {
+    width: 100%;
+  }
   #keypad {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
     grid-gap: 10px;
     padding: 10px;
   }
