@@ -148,6 +148,7 @@ export default {
       if (this.power === true) {
         const selectedKey = this.keys.find((key) => key.keyTrigger == e);
         const padColor = document.getElementById(selectedKey.keyTrigger);
+        if (!selectedKey) return;
         this.playSound(selectedKey);
         padColor.classList.add("pushed-pad");
         setTimeout(() => {
@@ -159,8 +160,8 @@ export default {
     handleKeyDown(e) {
       if (this.power === true) {
         const selectedKey = this.keys.find((key) => key.keyCode === e.keyCode);
-        const padColor = document.getElementById(selectedKey.keyTrigger);
         if (!selectedKey) return;
+        const padColor = document.getElementById(selectedKey.keyTrigger);
         this.playSound(selectedKey);
         padColor.classList.add("pushed-pad");
       }
@@ -168,8 +169,8 @@ export default {
     handleKeyUp(e) {
       if (this.power === true) {
         const selectedKey = this.keys.find((key) => key.keyCode === e.keyCode);
-        const padColor = document.getElementById(selectedKey.keyTrigger);
         if (!selectedKey) return;
+        const padColor = document.getElementById(selectedKey.keyTrigger);
         this.display = "";
         padColor.classList.remove("pushed-pad");
       }
@@ -225,7 +226,9 @@ h3 {
   text-align: center;
   margin: 10px auto 30px auto;
 }
-
+.pushed-pad {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
 /* toggle button */
 /* The switch - the box around the slider */
 .switch {
@@ -279,8 +282,5 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
-}
-.pushed-pad {
-  background: rgba(255, 255, 255, 0.3) !important;
 }
 </style>
