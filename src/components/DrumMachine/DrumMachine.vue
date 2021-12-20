@@ -150,6 +150,7 @@ export default {
         const padColor = document.getElementById(selectedKey.keyTrigger);
         if (!selectedKey) return;
         this.playSound(selectedKey);
+        if (!padColor) return;
         padColor.classList.add("pushed-pad");
         setTimeout(() => {
           this.display = "";
@@ -163,6 +164,7 @@ export default {
         if (!selectedKey) return;
         const padColor = document.getElementById(selectedKey.keyTrigger);
         this.playSound(selectedKey);
+        if (!padColor) return;
         padColor.classList.add("pushed-pad");
       }
     },
@@ -172,6 +174,7 @@ export default {
         if (!selectedKey) return;
         const padColor = document.getElementById(selectedKey.keyTrigger);
         this.display = "";
+        if (!padColor) return;
         padColor.classList.remove("pushed-pad");
       }
     },
