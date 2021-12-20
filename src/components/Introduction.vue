@@ -1,8 +1,9 @@
 <template>
-  <h2 class="custom-H2">Hermier Evan</h2>
-  <h3>Free Code Camp Frontent Development Libraries Certification Projects</h3>
-
   <section>
+    <h2 class="custom-H2">Hermier Evan</h2>
+    <h3>
+      Free Code Camp Frontent Development Libraries Certification Projects
+    </h3>
     <div>
       <h4>Quote Generator</h4>
       <p>Ressources</p>
