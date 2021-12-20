@@ -69,7 +69,7 @@
           <button id="start_stop" @click="startPomodoro">Start</button>
         </div>
         <div v-show="state">
-          <button id="pause" @click="pausePlay">
+          <button id="start_stop" @click="pausePlay">
             {{ !playState ? "play" : "pause" }}
           </button>
           <button id="reset" @click="reset">Reset</button>
@@ -90,6 +90,12 @@
 <script>
 var DEFAULT_SESSION = 1500;
 var DEFAULT_BREAKS = 300;
+var audioPlay = new Audio(
+  require("../../assets/audio/mixkit-shaker-bell-alert-599.mp3")
+);
+var audioBreak = new Audio(
+  require("../../assets/audio/mixkit-phone-ring-bell-593.wav")
+);
 export default {
   name: "clock",
   data() {
@@ -117,6 +123,7 @@ export default {
       this.playState = true;
       this.sessionTimeLeft = this.sessionCtrl;
       this.breakTimeLeft = this.breakCtrl;
+      audioPlay.play();
       this.sessionTimer();
     },
     reset() {
@@ -146,6 +153,7 @@ export default {
         this.sessionTimeLeft--;
         if (this.sessionTimeLeft === 0) {
           clearInterval(this.sessionTimerID);
+          audioBreak.play();
           this.breakTimer();
         }
       }, 1000);
@@ -242,6 +250,19 @@ nav span {
   text-decoration: underline;
   letter-spacing: 0.5px;
   margin-top: 30px;
+}
+/***___Media Queries___***/
+/***___Tablet, Moins de 992px___***/
+@media (max-width: 991.98px) {
+}
+/***___Mobile, Moins de 668px___***/
+@media (max-width: 667.98px) {
+  nav {
+    flex-direction: column;
+  }
+  nav h4 {
+    text-align: center;
+  }
 }
 .fade-enter-active,
 .fade-leave-active {
