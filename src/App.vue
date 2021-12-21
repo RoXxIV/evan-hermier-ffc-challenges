@@ -165,7 +165,7 @@ nav ul li {
   margin: 0px 10px;
 }
 nav ul li:hover span {
-  opacity: 0.8;
+  opacity: 0.6;
 }
 /***___Mobile Nav___***/
 #mobileNav {

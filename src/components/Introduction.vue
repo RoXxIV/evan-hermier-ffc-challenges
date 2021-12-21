@@ -125,6 +125,15 @@
             >https://developer.mozilla.org/en-US/docs/...</a
           >
         </li>
+        <li>
+          Free Bell Sound Effects :
+          <a
+            href="https://mixkit.co/free-sound-effects/bell/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >https://mixkit.co/free-sound-effects/bell/...</a
+          >
+        </li>
       </ul>
     </div>
     <p id="made-with">made with vue.js 3</p>

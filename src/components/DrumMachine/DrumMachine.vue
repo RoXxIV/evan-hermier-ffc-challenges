@@ -197,7 +197,7 @@ export default {
 <style scoped>
 #drum-machine-header {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
 }
 h3 {
